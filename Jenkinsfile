@@ -1,13 +1,14 @@
 pipeline {
     agent any
     environment {
-        AWS_ACCESS_KEY_ID = credentials('aws-id-secret')
+        WS_ACCESS_KEY_ID = credentials('aws-id-secret')
         AWS_SECRET_ACCESS_KEY = credentials('aws-password-secret')
-        AWS_S3_BUCKET = "gradffffffffffff"
-        ARTIFACT_NAME = "sample-gradle.jar"
+        AWS_S3_BUCKET = "gradle-3"
+        ARTIFACT_NAME = "spring-boot.jar"
         AWS_EB_APP_NAME = "gradle"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
         AWS_EB_ENVIRONMENT = "Gradle-env"
+    }
      }
     stages {
         stage('Validate') {
