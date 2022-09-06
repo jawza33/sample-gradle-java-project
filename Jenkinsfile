@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Package') {
             steps {
-                sh "./gradlew jar"
+                sh "./gradlew.jar"
             }
             post{
                 success{
