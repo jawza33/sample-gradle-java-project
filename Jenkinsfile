@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "./gradlew test"
+                sh "mvn package"
             }
         }
         stage('Package') {
